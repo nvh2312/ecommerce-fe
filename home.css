@@ -1548,8 +1548,3 @@ input[type="text"].input-subscribe::placeholder {
 }
 
 /* end scroll to top */
-@media screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }

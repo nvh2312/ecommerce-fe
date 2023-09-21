@@ -10,6 +10,15 @@ $(document).ready(function () {
   let wrapper = $(".wrapper");
   let icon_close = $(".icon-close");
   let bars_icon = $(".bars");
+  let search_icon = $("#mobile-search");
+  let search_mobile = $(".search-mobile");
+  let search_close = $(".search-close");
+  let show_social = $(".show-social");
+  let list_social = $(".list-social");
+  let container_subscribe = $(".subscriber-container");
+  let show_form_subscribe = $("#show-subscribe");
+  let hide_form_subscribe = $("#hide-subscribe");
+  
   let body = $("body");
 
   const svg_next = `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewBox="0 0 11 18" fill="none">
@@ -36,6 +45,36 @@ $(document).ready(function () {
     infinite: false,
     prevArrow: `<button type='button' class='slick-prev pre-item'>${svg_pre}`,
     nextArrow: `<button type='button' class='slick-next next-item'>${svg_next}`,
+    responsive: [
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
   });
 
   $(".container-bseller").slick({
@@ -47,6 +86,36 @@ $(document).ready(function () {
     infinite: false,
     prevArrow: `<button type='button' class='slick-prev pre-item'>${svg_pre}`,
     nextArrow: `<button type='button' class='slick-next next-item'>${svg_next}`,
+    responsive: [
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
   });
 
   $(".container-bigdeals").slick({
@@ -58,6 +127,36 @@ $(document).ready(function () {
     infinite: false,
     prevArrow: `<button type='button' class='slick-prev pre-item'>${svg_pre}`,
     nextArrow: `<button type='button' class='slick-next next-item'>${svg_next}`,
+    responsive: [
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
   });
 
   $(document).on("click", function (e) {
@@ -137,6 +236,36 @@ $(document).ready(function () {
     }
   });
 
+  // show mobile search
+
+  search_icon.on("click", function () {
+    if (!search_mobile.hasClass("active")) {
+      search_mobile.addClass("active");
+    }
+  });
+
+  // close mobile search
+
+  search_close.on("click", function () {
+    search_mobile.removeClass("active");
+  });
+
+  // toggle right icon top header
+  show_social.on("click", function () {
+    list_social.toggleClass("active");
+  });
+
+  // show/hide form subscribe
+
+  show_form_subscribe.on("click", function () {
+    container_subscribe.addClass("active");
+  })
+
+  hide_form_subscribe.on("click", function () {
+    container_subscribe.removeClass("active");
+  })
+
+  // scroll to top
   $("#scrollToTopBtn").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 500);
     return false;

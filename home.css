@@ -946,7 +946,7 @@ ul.list-categories>li.category-name.active {
 .product-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     border-radius: 6px;
     border: 1px solid var(--grey-100);
@@ -983,9 +983,6 @@ ul.list-categories>li.category-name.active {
 }
 
 .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: linear 0.25s;
 }
 

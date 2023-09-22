@@ -1,0 +1,72 @@
+@import url("./product-card.css");
+/* product-ads */
+
+.feature-header {
+    margin-left: 10px;
+    margin-right: auto;
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid var(--primary-600);
+}
+
+.product-ads {
+    padding: 10px 0 60px 0;
+    background: var(--grey-100);
+}
+
+.column-type {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.column-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column-product .product-card {
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-product .card-header {
+    gap: 12px;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.product-image {
+    transition: linear 0.25s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-rate {
+    display: flex;
+}
+
+/* end product-ads */
+
+/* responsive */
+
+@media screen and (max-width: 767.98px) {
+    .column-type {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
+

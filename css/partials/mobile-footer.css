@@ -1,0 +1,36 @@
+/* mobile footer */
+
+.mobile-footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--White);
+    z-index: 99;
+}
+
+.footer-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+}
+
+/* end mobile footer */
+
+/* responsive */
+
+@media screen and (max-width: 767.98px) {
+    .mobile-footer {
+        display: block;
+    }
+}

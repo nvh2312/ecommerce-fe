@@ -1,0 +1,141 @@
+/* sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    width: 240px;
+    height: 100%;
+    background: var(--White);
+    transition: ease-in-out 0.25s;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /*hidden scroll */
+}
+
+.wrapper::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.wrapper.show-sidebar::before {
+    pointer-events: auto;
+    z-index: 100;
+    visibility: visible;
+}
+
+.wrapper.category-dropdown::before {
+    background-color: transparent;
+    pointer-events: auto;
+    z-index: 100;
+    visibility: visible;
+}
+
+.wrapper.show-sidebar .sidebar {
+    z-index: 101;
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 66px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-100, #EEF0F4);
+}
+
+.sidebar-title {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.icon-close {
+    padding: 11px;
+}
+
+.icon-close:hover {
+    background-color: var(--grey-100);
+    border-radius: 100px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey-100);
+}
+
+.sidebar-menu ul,
+.sidebar-menu li {
+    list-style: none;
+}
+
+.sidebar-item {
+    border-bottom: 1px solid var(--grey-100);
+}
+
+.sidebar-item:hover {
+    cursor: pointer;
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.item-title {
+    color: var(--grey-900);
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+.item-show {
+    padding: 5px 2px;
+}
+
+.hide-sub {
+    display: none;
+}
+
+.sidebar-item.active .hide-sub {
+    display: block;
+}
+
+.sidebar-item.active .show-sub {
+    display: none;
+}
+
+.list-subitems {
+    display: none;
+}
+
+.sidebar-item.active .list-subitems {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    align-self: stretch;
+}
+
+.sub-item:hover {
+    background-color: var(--grey-100);
+}
+
+.content-subitem {
+    color: var(--grey-700);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* end sidebar */

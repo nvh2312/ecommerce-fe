@@ -1,0 +1,52 @@
+/* brands */
+
+.brand-container {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    border-radius: 6px;
+    border: 1px solid var(--grey-100, #EEF0F4);
+    background: var(--White);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 40px 0;
+}
+
+.brand-item {
+    height: 80px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.brand-item svg path {
+    transition: linear 0.25s;
+}
+
+.brand-item:hover svg path {
+    fill: var(--grey-900);
+}
+
+/* end brands */
+
+/* responsive */
+
+@media screen and (max-width: 1121.98px) {
+    .brand-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .brand-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 0;
+        margin-bottom: 20px;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 472.98px) {
+    .brand-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

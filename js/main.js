@@ -22,19 +22,25 @@ $(document).ready(function () {
   let container_subscribe = $(".subscriber-container");
   let show_form_subscribe = $("#show-subscribe");
   let hide_form_subscribe = $("#hide-subscribe");
+  let hostname = window.location.host;
+  let base_url =
+    hostname.includes("127.0.0.1") || hostname.includes("localhost")
+      ? ""
+      : `/ecommerce-fe`;
+  console.log(hostname);
 
   let body = $("body");
 
   $(".main-logo").on("click", function () {
-    window.location.pathname = "/";
+    window.location.href = base_url;
   });
 
   list_sub.on("click", function () {
-    window.location.pathname = "/filter.html";
+    window.location.href = base_url + "/filter.html";
   });
 
   container_detail.on("click", function () {
-    window.location.pathname = "/filter.html";
+    window.location.href = base_url + "/filter.html";
   });
 
   $(document).on("click", function (e) {

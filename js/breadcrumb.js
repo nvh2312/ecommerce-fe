@@ -6,16 +6,16 @@ $(document).ready(function () {
   let last_breadcrumb = breadcrumbChildren.last();
   first_breadcrumb.on("click", function () {
     if (!first_breadcrumb.is(last_breadcrumb)) {
-      window.location.pathname = "/";
+      window.location.href = base_url + "/";
     }
   });
   second_breadcrumb.on("click", function () {
     if (!second_breadcrumb.is(last_breadcrumb)) {
-      window.location.pathname = "/filter.html?page=main";
+      window.location.href = base_url + "/filter.html?page=main";
     }
   });
   third_breadcrumb.on("click", function () {
     if (!third_breadcrumb.is(last_breadcrumb))
-      window.location.pathname = "/filter.html?page=sub";
+      window.location.href = base_url + "/filter.html?page=sub";
   });
 });

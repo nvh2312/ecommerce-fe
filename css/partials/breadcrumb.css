@@ -1,0 +1,29 @@
+.breadcrumb {
+    padding: 40px 0;
+}
+
+.breadcrumb-content {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    color: var(--grey-700);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(16/14);
+}
+
+.breadcrumb-item:not(:last-child):after {
+    margin: 0 13px;
+    content: "/";
+}
+
+.breadcrumb-item:hover {
+    color: var(--grey-900);
+    cursor: pointer;
+}
+
+.breadcrumb-item:last-child:hover {
+    cursor: default;
+}

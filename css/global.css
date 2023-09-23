@@ -8,6 +8,42 @@ h6 {
     font-weight: 500;
 }
 
+
+.bg-grey-100 {
+    background-color: var(--grey-100);
+}
+
+.font-title {
+    color: var(--grey-900);
+    font-size: 16px;
+    line-height: calc(19/16);
+    font-weight: 500;
+}
+
+.font-bold {
+    color: var(--grey-900) !important;
+    font-weight: 500 !important;
+}
+
+.text-quantity {
+    color: var(--grey-400);
+}
+
+.text-quantity:after {
+    content: ")";
+}
+
+.text-quantity::before {
+    content: "(";
+}
+
+.text-normal {
+    color: var(--grey-700);
+    font-size: 14px;
+    line-height: calc(16/14);
+    font-weight: 400;
+}
+
 .ml-0 {
     margin-left: 0 !important;
 }
@@ -43,6 +79,12 @@ h6 {
 .btn-primary {
     background-color: var(--primary-600);
     color: var(--White);
+}
+
+.border-shadow {
+    border-radius: 6px;
+    border: 1px solid var(--grey-100, #EEF0F4);
+    background-color: var(--White);
 }
 
 /* scroll to top */

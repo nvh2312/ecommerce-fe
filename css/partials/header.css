@@ -7,6 +7,10 @@
     color: var(--grey-600);
 }
 
+.main-logo {
+    cursor: pointer;
+}
+
 .header-content {
     display: flex;
     flex-direction: row;
@@ -530,8 +534,8 @@ ul.list-categories>li.category-name.active {
         display: block;
     }
 
-    .icon-option:hover .tooltip {
-        opacity: 0;
+    .tooltip {
+        display: none;
     }
 
     .header-category {

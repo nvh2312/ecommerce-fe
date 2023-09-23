@@ -26,15 +26,15 @@ $(document).ready(function () {
   let body = $("body");
 
   $(".main-logo").on("click", function () {
-    window.location.href = "/";
+    window.location.pathname = "/";
   });
 
   list_sub.on("click", function () {
-    window.location.href = "/filter.html";
+    window.location.pathname = "/filter.html";
   });
 
   container_detail.on("click", function () {
-    window.location.href = "/filter.html";
+    window.location.pathname = "/filter.html";
   });
 
   $(document).on("click", function (e) {

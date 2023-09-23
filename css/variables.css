@@ -13,7 +13,10 @@
     --grey-800: #3B4758;
     --grey-900: #1D232C;
     --White: #FFF;
+    --success-100: #CAFBEC;
+    --success-600: #0DA678;
     --danger-600: #FF316A;
+    --danger-100: #FFE5EC;
     --intro-600: #129199;
     --pale_gradient_green: linear-gradient(182deg, #F2FFF7 0%, #C3F4FF 100%);
     --pale_gradient_peach: linear-gradient(182deg, #FFFCF3 0%, #FFDFDF 100%);

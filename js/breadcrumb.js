@@ -6,7 +6,7 @@ $(document).ready(function () {
   let last_breadcrumb = breadcrumbChildren.last();
   first_breadcrumb.on("click", function () {
     if (!first_breadcrumb.is(last_breadcrumb)) {
-      window.location.href = base_url + "/";
+      window.location.href = base_url + "/filter.html";
     }
   });
   second_breadcrumb.on("click", function () {

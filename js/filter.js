@@ -188,13 +188,14 @@ $(document).ready(function () {
 
   // show product
   function showProduct(style = "list") {
+    const todetail = `'${base_url}/detail.html'`;
     let html = ``;
     body_display.empty();
     if (style === "list") {
       list_product.forEach((value) => {
         html += `
           <div class="product-item">
-            <div class="product-card">
+            <div class="product-card" onclick="window.location.href = ${todetail}">
               <div class="card-header">
                 <h4 class="category-product">${value.category}</h4>
                 <h3 class="product-name">
@@ -263,7 +264,7 @@ $(document).ready(function () {
       list_product.forEach((value) => {
         html += `
         <div class="product-item">
-        <div class="product-card product-list">
+        <div class="product-card product-list" onclick="window.location.href = ${todetail}";>
           <div class="product-image">
             <img src="${value.image}" alt="product" />
           </div>

@@ -1,3 +1,9 @@
+let hostname = window.location.host;
+let base_url =
+  hostname.includes("127.0.0.1") || hostname.includes("localhost")
+    ? ""
+    : `/ecommerce-fe`;
+
 $(document).ready(function () {
   let category_container = $(".category-container");
   let detail_tv = $("#detail-tv");
@@ -22,17 +28,17 @@ $(document).ready(function () {
   let container_subscribe = $(".subscriber-container");
   let show_form_subscribe = $("#show-subscribe");
   let hide_form_subscribe = $("#hide-subscribe");
-  let hostname = window.location.host;
-  let base_url =
-    hostname.includes("127.0.0.1") || hostname.includes("localhost")
-      ? ""
-      : `/ecommerce-fe`;
-  console.log(hostname);
 
   let body = $("body");
 
+  $(".product-card").on("click", function () {
+    window.location.href = base_url + "/detail.html";
+  });
+
+
+  
   $(".main-logo").on("click", function () {
-    window.location.href = base_url;
+    window.location.href = base_url + "/";
   });
 
   list_sub.on("click", function () {
